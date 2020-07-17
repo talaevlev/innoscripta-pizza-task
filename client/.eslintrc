@@ -1,0 +1,89 @@
+{
+  "env": {
+    "browser": true
+  },
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "legacyDecorators": true
+    }
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
+  },
+  "globals": {
+    "browser": true,
+    "window": true,
+    "document": true,
+    "fetch": true,
+    "FormData": true
+  },
+  "rules": {
+    "arrow-parens": ["off"],
+    "camelcase": ["off"],
+    "comma-dangle": ["error", {"functions": "ignore"}],
+    "eol-last": ["off"],
+    "func-names": ["error", "never"],
+    "function-paren-newline": ["error", "consistent"],
+    "import/no-mutable-exports": ["warn"],
+    "import/prefer-default-export": ["off"],
+    "indent": ["error", 4, { "SwitchCase": 1 }],
+    "implicit-arrow-linebreak": ["off"],
+    "import/no-useless-path-segments": ["off"],
+    "import/no-cycle": ["warn"],
+    "jsx-a11y/anchor-is-valid": [0],
+    "jsx-a11y/click-events-have-key-events": [0],
+    "jsx-a11y/no-static-element-interactions": [0],
+    "linebreak-style": ["off"],
+    "max-classes-per-file": ["off"],
+    "no-case-declarations": ["off"],
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "no-debugger": ["off"],
+    "no-else-return": ["off"],
+    "no-lonely-if": ["off"],
+    "no-nested-ternary": [0],
+    "no-param-reassign": ["warn"],
+    "no-plusplus": ["warn"],
+    "no-return-assign": ["off"],
+    "no-shadow": ["warn"],
+    "no-tabs": ["off"],
+    "no-trailing-spaces": ["error", { "skipBlankLines": true }],
+    "no-redeclare": ["warn"],
+    "no-underscore-dangle": ["warn"],
+    "no-unneeded-ternary": ["warn"],
+    "no-unused-expressions": ["off"],
+    "no-unused-vars": ["off"],
+    "no-use-before-define": ["warn"],
+    "object-shorthand": ["warn"],
+    "one-var": ["warn"],
+    "operator-linebreak": ["warn"],
+    "prefer-promise-reject-errors": ["warn"],
+    "prefer-template": ["warn"],
+    "prefer-object-spread": ["warn"],
+    "react/destructuring-assignment": ["warn"],
+    "react/forbid-prop-types": [0],
+    "react/jsx-closing-bracket-location": ["error", "after-props"],
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+    "react/jsx-first-prop-new-line": ["off"],
+    "react/jsx-fragments": ["warn"],
+    "react/jsx-indent-props": ["off"],
+    "react/jsx-indent": ["off"],
+    "react/jsx-no-bind": ["error"],
+    "react/jsx-props-no-spreading": ["off"],
+    "react/jsx-one-expression-per-line": ["warn"],
+    "react/static-property-placement": ["off"],
+    "react/no-did-mount-set-state": ["off"],
+    "react/no-access-state-in-setstate": ["warn"],
+    "react/no-unused-state": ["warn"],
+    "react/no-unused-prop-types": ["warn"],
+    "react/prefer-stateless-function": [0],
+    "react/prop-types": ["warn"],
+    "react/state-in-constructor": ["off"],
+    "wrap-iife": [2, "any"]
+  }
+}
