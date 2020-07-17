@@ -1,0 +1,26 @@
+.header {
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__right-side {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  &__logo {
+    font-size: 32px;
+    color: @text-color-dark;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  &__total {
+    display: flex;
+    flex-flow: row nowrap;
+    color: @text-color-dark;
+    font-size: 24px;
+    margin-right: @margin-lg * 4;
+    &__usd {
+      margin-left: @margin-lg
+    }
+  }
+}

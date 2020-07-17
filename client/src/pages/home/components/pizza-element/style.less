@@ -1,0 +1,52 @@
+.pizza-element {
+  width: 240px;
+  margin-right: @margin-lg * 2;
+  margin-bottom: @margin-lg * 2;
+  display: flex;
+  flex-flow: column;
+  & .ant-card-cover {
+    padding: @padding-xs @padding-xs 0 @padding-xs;
+  }
+  & .ant-card-body {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    &:before, &:after {
+      display: none;
+    }
+  }
+  &__bottom {
+    margin-top: @margin-md;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    &__price {
+      color: @text-color;
+      font-size: 20px;
+    }
+    &__add {
+      & .ant-input-number {
+        width: 50px;
+        & .ant-input-number-handler-wrap {
+          opacity: 1;
+          & span:hover {
+            & .anticon {
+              &:hover {
+                color: @primary-color;
+              }
+            }
+          }
+        }
+        & input {
+          padding: 0 @padding-xs;
+        }
+        &:hover {
+          border-color: @primary-color;
+        }
+      }
+    }
+  }
+}
