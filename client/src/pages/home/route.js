@@ -5,5 +5,5 @@ const Page = lazy(() => import('./component'));
 
 export default <Route exact
     key="/home"
-    path={['/no-match', '/home']}
+    path={['/', '/home']}
     component={Page} />;

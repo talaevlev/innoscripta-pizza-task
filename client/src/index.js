@@ -5,6 +5,8 @@ import { Router } from 'react-router-dom';
 import { ConfigProvider } from 'antd';
 import enUs from 'antd/es/locale/en_US';
 
+import { UserProvider } from 'models/user/context';
+
 import routes from './routes';
 import './style/style.less';
 
@@ -13,7 +15,9 @@ const history = createBrowserHistory();
 ReactDOM.render(
     <ConfigProvider locale={enUs}>
         <Router history={history}>
-            { routes }
+            <UserProvider>
+                { routes }
+            </UserProvider>
         </Router>
     </ConfigProvider>,
     document.getElementById('root')

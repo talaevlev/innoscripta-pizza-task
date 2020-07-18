@@ -10,13 +10,13 @@ const { Option } = Select;
 
 export default ({ pizzas, onChangeItem }) => {
     const cn = useClassName('home-content');
-    const [current, setCurrent] = useState('euro');
+    const [currency, setCurrent] = useState('euro');
 
     return (
         <div className={cn()}>
             <div className={cn('select-price')}>
                 <div className={cn('select-price', 'label')}>Select price label:</div>
-                <Select onSelect={setCurrent} value={current}>
+                <Select onSelect={setCurrent} value={currency}>
                     <Option key="euro" value="euro">Euro</Option>
                     <Option key="usd" value="usd">USD</Option>
                 </Select>
@@ -26,7 +26,7 @@ export default ({ pizzas, onChangeItem }) => {
                     <PizzaElement key={pizza.id}
                         pizza={pizza}
                         onChangeItem={onChangeItem}
-                        current={current} />
+                        currency={currency} />
                 ))}
             </div>
         </div>

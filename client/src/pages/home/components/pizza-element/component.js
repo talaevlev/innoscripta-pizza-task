@@ -7,7 +7,7 @@ import './style.less';
 
 const { Meta } = Card;
 
-export default ({ pizza, current, onChangeItem }) => {
+export default ({ pizza, currency, onChangeItem }) => {
     const cn = useClassName('pizza-element');
     const {
         title, description, id, price
@@ -15,7 +15,7 @@ export default ({ pizza, current, onChangeItem }) => {
 
     const getPrice = () => {
         const { euro, usd } = price;
-        switch (current) {
+        switch (currency) {
             case 'usd': return `${usd} USD`;
             case 'euro':
             default: return `${euro} Euro`;
