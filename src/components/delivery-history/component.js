@@ -112,12 +112,14 @@ const ModalContent = ({ onCancel }) => {
 
     return (
         <div className={cn()}>
-            {history.map((item) => (
-                <DeliveryItem key={`${item.name} ${item.address} ${item.date}`}
-                    email={email}
-                    onCancel={onCancel}
-                    {...item} />
-            ))}
+            {history?.length
+                ? history.map((item) => (
+                    <DeliveryItem key={`${item.name} ${item.address} ${item.date}`}
+                        email={email}
+                        onCancel={onCancel}
+                        {...item} />
+                ))
+                : <span>Empty...</span>}
         </div>
     );
 };
