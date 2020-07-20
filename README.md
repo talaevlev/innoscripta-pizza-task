@@ -4,17 +4,26 @@ Test task for Innoscripta
 ## To start frontend part
 
 ```
-Mark directory client/src as a Resource Root!
+Mark directory client as a Resource Root!
 
-cd client
 yarn install
-yarn start
+yarn run start-dev
+
+After, open this page in browser http://localhost:3000/
+```
 
 To build:
-cd client
+```
+yarn install
 yarn run build
 
 Result will be in directory client/dist
 ```
 
-After, open this page in browser http://localhost:3000/
+To start server:
+```
+yarn install
+yarn start
+
+After, open this page in browser http://localhost:8080/
+```
