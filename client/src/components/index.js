@@ -2,3 +2,8 @@ export { default as Header } from './header';
 export { default as Content } from './content';
 export { default as Footer } from './footer';
 export { default as LoginModal } from './login-modal';
+export { default as CartContent } from './cart-content';
+export { default as PizzaElement } from './pizza-element';
+export { default as PizzasWrap } from './pizzas-wrap';
+export { default as DeliveryInfo } from './delivery-info';
+export { default as DeliveryHistory } from './delivery-history';

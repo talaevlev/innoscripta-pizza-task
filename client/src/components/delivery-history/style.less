@@ -1,0 +1,46 @@
+.delivery-history {
+  &-item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid @border-color-base;
+    padding: @padding-md;
+    margin-bottom: @margin-md;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &__info {
+      &__element {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        &__label {
+          font-size: 20px;
+          margin-right: @margin-xs;
+          color: @heading-color;
+        }
+        &__data {
+          font-size: 18px;
+        }
+        &__items {
+          &__label {
+            font-size: 20px;
+            color: @heading-color;
+          }
+          &__data {
+            &__element {
+              & > span {
+                margin-right: @margin-xs;
+                &:last-child {
+                  margin-right: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

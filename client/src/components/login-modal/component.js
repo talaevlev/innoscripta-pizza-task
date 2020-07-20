@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import {
     Modal, Input, Button, Form, Tabs
 } from 'antd';
+import PropTypes from 'prop-types';
 
 import { createUser, isUserExistAndLogin, setStorageUser } from 'models/user/api';
 import { userStore, setUserAction } from 'models/user/context';
@@ -119,7 +120,7 @@ const ModalContent = ({ onCancel }) => {
     );
 };
 
-export default ({ visible, onCancel }) => (
+const LoginModal = ({ visible, onCancel }) => (
     <Modal centered
         title="Login window"
         width={350}
@@ -130,3 +131,14 @@ export default ({ visible, onCancel }) => (
         <ModalContent onCancel={onCancel} />
     </Modal>
 );
+
+LoginModal.propTypes = {
+    visible: PropTypes.bool.isRequired,
+    onCancel: PropTypes.func.isRequired
+};
+
+ModalContent.propTypes = {
+    onCancel: PropTypes.func.isRequired
+};
+
+export default LoginModal;

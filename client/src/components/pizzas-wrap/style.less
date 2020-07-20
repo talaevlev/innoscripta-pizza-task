@@ -20,4 +20,13 @@
     flex-flow: row wrap;
     justify-content: center;
   }
+  &__inline {
+    flex-flow: column;
+    & .home-content__select-price {
+      justify-content: flex-start;
+    }
+    & .home-content__pizzas {
+      flex-flow: column nowrap;
+    }
+  }
 }

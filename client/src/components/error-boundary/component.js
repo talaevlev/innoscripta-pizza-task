@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Collapse, Result, Button } from 'antd';
 import { withRouter } from 'react-router';
+import PropTypes from 'prop-types';
 
 import cn from 'utils/cn';
 import './style.less';
@@ -9,7 +10,7 @@ const { Panel } = Collapse;
 
 @withRouter
 @cn('error-boundary')
-export default class ErrorBoundary extends Component {
+class ErrorBoundary extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -54,3 +55,14 @@ export default class ErrorBoundary extends Component {
         return children;
     }
 }
+
+ErrorBoundary.propTypes = {
+    children: PropTypes.node.isRequired,
+    history: PropTypes.shape({ push: PropTypes.func })
+};
+
+ErrorBoundary.defaultProps = {
+    history: { push: () => {} }
+};
+
+export default ErrorBoundary;

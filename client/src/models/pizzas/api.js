@@ -1,4 +1,4 @@
-export const getPizzas = () => Promise.resolve([
+export const getPizzas = () => ([
     {
         id: 'americana',
         title: 'Pizza Americana',

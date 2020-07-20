@@ -6,6 +6,8 @@ import { ConfigProvider } from 'antd';
 import enUs from 'antd/es/locale/en_US';
 
 import { UserProvider } from 'models/user/context';
+import { PizzasProvider } from 'models/pizzas/context';
+import { CartItemsProvider } from 'models/cart/context';
 
 import routes from './routes';
 import './style/style.less';
@@ -16,7 +18,11 @@ ReactDOM.render(
     <ConfigProvider locale={enUs}>
         <Router history={history}>
             <UserProvider>
-                { routes }
+                <PizzasProvider>
+                    <CartItemsProvider>
+                        { routes }
+                    </CartItemsProvider>
+                </PizzasProvider>
             </UserProvider>
         </Router>
     </ConfigProvider>,
